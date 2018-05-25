@@ -18,23 +18,23 @@
   		<a href="#" data-activates="mobile-menu" class="right button-collapse"><i class="material-icons">menu</i></a>
 
   		<ul class="right hide-on-med-and-down">
-  			<li><a href="/music">Music</a></li>
-  			<li><a href="/videos">Videos</a></li>
-  			<li><a href="/photos">Photos</a></li>
-  			<li><a href="/contact">Contach Us</a></li>
+  			<li {{#is page "Music"}} class="active"{{/is}}><a href="/music">Music</a></li>
+  			<li {{#is page "Videos"}} class="active"{{/is}}><a href="/videos">Videos</a></li>
+  			<li {{#is page "Photos"}} class="active"{{/is}}><a href="/photos">Photos</a></li>
+  			<li {{#is page "Contact"}} class="active"{{/is}}><a href="/contact">Contact Us</a></li>
   			{{#if user}}
-  			<li><a href="/manager">Manager</a></li>
+  			<li {{#is page "Manager"}} class="active"{{/is}}><a href="/manager">Manager</a></li>
   			<li><a href="/logout">Logout</a></li>
   			{{/if}}	
   		</ul>
 
   		<ul class="side-nav" id="mobile-menu"> 
-  			<li><a href="/music">Music</a></li>
-  			<li><a href="/videos">Videos</a></li>
-  			<li><a href="/photos">Photos</a></li>
-  			<li><a href="/contact">Contach Us</a></li>
+  			<li {{#is page "Music"}} class="active"{{/is}}><a href="/music">Music</a></li>
+  			<li {{#is page "Videos"}} class="active"{{/is}}><a href="/videos">Videos</a></li>
+  			<li {{#is page "Photos"}} class="active"{{/is}}><a href="/photos">Photos</a></li>
+  			<li {{#is page "Contact"}} class="active"{{/is}}><a href="/contact">Contach Us</a></li>
   			{{#if user}}
-  			<li><a href="/manager">Manager</a></li>
+  			<li {{#is page "Manager"}} class="active"{{/is}}><a href="/manager">Manager</a></li>
   			<li><a href="/logout">Logout</a></li>
   			{{/if}}	
   		</ul>

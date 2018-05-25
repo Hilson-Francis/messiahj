@@ -1,9 +1,3 @@
-// var createError = require('http-errors');
-// var express = require('express');
-// var path = require('path');
-// var cookieParser = require('cookie-parser');
-// var logger = require('morgan');
-// var exphbs = require('express-handlebars');
 
 var express 			= require('express');
 var path 				= require('path');
@@ -19,25 +13,32 @@ var passport 			= require('passport');
 var LocalStrategy		= require('passport-local').Strategy;
 var mongo 				= require('mongodb');
 var mongoose 			= require('mongoose');
+var helpers		        = require('handlebars-helpers')();
 
+//Db Connection
 //mongoose.connect('mongodb://localhost/messiahj');
 //var db = mongoose.connection;
 
+//Routers 
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
 
 var app = express();
 
+var hbs = exphbs.create({
+	helpers: helpers,
+	defaultLayout: 'layout'
+});
+
 // View Engine
 app.set('views', path.join(__dirname, 'views'));
-app.engine('handlebars', exphbs({defaultLayout:'layout'}));
+app.engine('handlebars', hbs.engine);
 app.set('view engine', 'handlebars');
 
 // BodyParser Middleware
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
-
 
 app.use(logger('dev'));
 app.use(express.json());

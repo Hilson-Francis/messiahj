@@ -6,6 +6,11 @@ $('.button-collapse').sideNav({
 	edge: 'left'
 });
 
+$('nav li').on('click',function(){
+    console.log('summ')
+    $(this).addClass('active');
+})
+
 toastr.options = {
     "closeButton": true,
     "debug": false,
