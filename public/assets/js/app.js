@@ -1,9 +1,25 @@
-//toggle mobile nav
+
+M.AutoInit();
+
 $('.button-collapse').sideNav({
 	menuWidth: 300, 
 	edge: 'left'
 });
 
-$('#hero').click(function(){
-	console.log('click me')
-});
+toastr.options = {
+    "closeButton": true,
+    "debug": false,
+    "newestOnTop": false,
+    "progressBar": false,
+    "positionClass": "toast-bottom-left",
+    "preventDuplicates": true,
+    "onclick": null,
+    "showDuration": "300",
+    "hideDuration": "1000",
+    "timeOut": "3000",
+    "extendedTimeOut": "1000",
+    "showEasing": "swing",
+    "hideEasing": "linear",
+    "showMethod": "fadeIn",
+    "hideMethod": "fadeOut"
+  }

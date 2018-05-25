@@ -15,5 +15,9 @@
     "vendor/bower_components",
     "test",
     "tests"
-  ]
+  ],
+  "dependencies": {
+    "materialize": "^0.100.2",
+    "toastr": "^2.1.3"
+  }
 }
