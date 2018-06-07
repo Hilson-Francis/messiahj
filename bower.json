@@ -1,7 +1,7 @@
 {
-  "name": "massiahj-music",
-  "description": "massiahj music web app",
-  "main": "index.hbs",
+  "name": "messiahj-music",
+  "description": "messiahj music web app",
+  "main": "index.handlebars",
   "authors": [
     "hilson <hilson.francis@giftibly.com>"
   ],

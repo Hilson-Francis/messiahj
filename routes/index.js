@@ -3,23 +3,23 @@ var router = express.Router();
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
-  res.render('index', { title: 'Messiahj' });
+  res.render('index', { title: 'Messiah Jay Music', page: 'home' });
 });
 
 router.get('/music', function(req, res, next) {
-  res.render('shared/music', { title: 'Messiahj Music', page: 'Music' });
+  res.render('shared/music', { title: 'Messiah Jay Music', page: 'music' });
 });
 
 router.get('/videos', function(req, res, next) {
-  res.render('shared/videos', { title: 'Messiahj Videos', page: 'Videos' });
+  res.render('shared/videos', { title: 'Messiah Jay Videos', page: 'videos' });
 });
 
 router.get('/photos', function(req, res, next) {
-  res.render('shared/photos', { title: 'Messiahj Photos', page: 'Photos' });
+  res.render('shared/photos', { title: 'Messiah Jay Photos', page: 'photos' });
 });
 
 router.get('/contact', function(req, res, next) {
-  res.render('shared/contact', { title: 'Messiahj Contact Us', page: 'Contact' });
+  res.render('shared/contact', { title: 'Messiah Jay Contact Information', page: 'contact' });
 });
 
 module.exports = router;

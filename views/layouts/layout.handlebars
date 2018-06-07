@@ -12,32 +12,45 @@
   <nav>
   	<div class="nav-wrapper">
   		<a href="/" class="brand-logo">
-  			<img src="/public/img/logo.png" alt="logo">    
+  			<img src="/images/logo.jpg" alt="logo">    
   		</a>
 
-  		<a href="#" data-activates="mobile-menu" class="right button-collapse"><i class="material-icons">menu</i></a>
-
   		<ul class="right hide-on-med-and-down">
-  			<li {{#is page "Music"}} class="active"{{/is}}><a href="/music">Music</a></li>
-  			<li {{#is page "Videos"}} class="active"{{/is}}><a href="/videos">Videos</a></li>
-  			<li {{#is page "Photos"}} class="active"{{/is}}><a href="/photos">Photos</a></li>
-  			<li {{#is page "Contact"}} class="active"{{/is}}><a href="/contact">Contact Us</a></li>
+  			<li {{#is page "music"}} class="active"{{/is}}><a href="/music">Music</a></li>
+  			<li {{#is page "videos"}} class="active"{{/is}}><a href="/videos">Videos</a></li>
+  			<li {{#is page "photos"}} class="active"{{/is}}><a href="/photos">Photos</a></li>
+  			<li {{#is page "contact"}} class="active"{{/is}}><a href="/contact">Contact Us</a></li>
   			{{#if user}}
-  			<li {{#is page "Manager"}} class="active"{{/is}}><a href="/manager">Manager</a></li>
+  			<li {{#is page "manager"}} class="active"{{/is}}><a href="/manager">Manager</a></li>
   			<li><a href="/logout">Logout</a></li>
   			{{/if}}	
   		</ul>
 
-  		<ul class="side-nav" id="mobile-menu"> 
-  			<li {{#is page "Music"}} class="active"{{/is}}><a href="/music">Music</a></li>
-  			<li {{#is page "Videos"}} class="active"{{/is}}><a href="/videos">Videos</a></li>
-  			<li {{#is page "Photos"}} class="active"{{/is}}><a href="/photos">Photos</a></li>
-  			<li {{#is page "Contact"}} class="active"{{/is}}><a href="/contact">Contach Us</a></li>
-  			{{#if user}}
-  			<li {{#is page "Manager"}} class="active"{{/is}}><a href="/manager">Manager</a></li>
-  			<li><a href="/logout">Logout</a></li>
-  			{{/if}}	
-  		</ul>
+      <a href="#" data-target="slide-out" class="sidenav-trigger show-on-medium-and-down right"><i class="material-icons">menu</i></a>
+
+      <ul id="slide-out" class="sidenav">
+        <li {{#is page "home"}} class="active"{{/is}}>
+          <a href="/"><i class="material-icons">home</i>Home</a>
+        </li>
+        <li {{#is page "music"}} class="active"{{/is}}>
+          <a href="/music"><i class="material-icons">library_music</i>Music</a>
+        </li>
+        <li {{#is page "videos"}} class="active"{{/is}}>
+          <a href="/videos"><i class="material-icons">video_library</i>Videos</a>
+        </li>
+        <li {{#is page "photos"}} class="active"{{/is}}>
+          <a href="/photos"><i class="material-icons">image</i>Photos</a>
+        </li>
+        <li {{#is page "contact"}} class="active"{{/is}}>
+          <a href="/contact"><i class="material-icons">contacts</i>Contact</a>
+        </li>
+        {{#if user}}
+        <li {{#is page "manager"}} class="active"{{/is}}>
+          <a href="/manager"><i class="material-icons">settings</i>Manager</a>
+        </li>
+        <li><a href="/logout"><i class="material-icons">power_settings_new</i>Logout</a></li>
+        {{/if}} 
+      </ul>
 
   	</div>
   </nav>
@@ -56,10 +69,9 @@
   </footer>
 
   </body>
-
+ 
   <script type="text/javascript" src="/bower_components/jquery/dist/jquery.min.js"></script>
-  <script type="text/javascript" src="/bower_components/materialize/dist/js/materialize.min.js"></script>
-  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/js/materialize.min.js"></script>
+  <script type="text/javascript" src="/lib/materialize.min.js"></script>
   <script type="text/javascript" src="/bower_components/toastr/toastr.min.js"></script>
   <script type="text/javascript" src="/app.min.js"></script>
   {{#if success_msg }}<script type="text/javascript"> toastr.success('{{success_msg}}'); </script> {{/if}}

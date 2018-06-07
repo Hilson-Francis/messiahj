@@ -1,18 +1,8 @@
 
 M.AutoInit();
 
-$('.button-collapse').sideNav({
-	menuWidth: 300, 
-	edge: 'left'
-});
-
-$('nav li').on('click',function(){
-    console.log('summ')
-    $(this).addClass('active');
-})
-
 toastr.options = {
-    "closeButton": true,
+    "closeButton": false,
     "debug": false,
     "newestOnTop": false,
     "progressBar": false,
@@ -28,3 +18,7 @@ toastr.options = {
     "showMethod": "fadeIn",
     "hideMethod": "fadeOut"
   }
+
+$('.parallax').parallax();
+
+$('.sidenav').sidenav();

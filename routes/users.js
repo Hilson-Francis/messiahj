@@ -2,11 +2,11 @@ var express = require('express');
 var router = express.Router();
 
 router.get('/login', function(req, res, next) {
-	res.render('user/login', { title: 'Messiahj Login' });
+	res.render('user/login', { title: 'Messiah Jay Login' });
 });
 
 router.get('/manager', ensureAuthenticated, function(req, res){
-	res.render('user/manager', { title: 'Messiahj Manager' });
+	res.render('user/manager', { title: 'Messiah Jay Manager', page: 'manager' });
 });
 
 function ensureAuthenticated(req, res, next){
